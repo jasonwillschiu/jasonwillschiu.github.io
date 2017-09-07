@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title }} - {{ article.category }}{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  {% if article.description %}
+    <meta name="description" content="{{article.description}}" />
+  {% endif %}
+
+  {% for tag in article.tags %}
+    <meta name="tags" content="{{tag}}" />
+  {% endfor %}
+
+{% endblock %}
+
+{% block content %}
+<div class="alert alert-warning alert-dismissable" role="alert">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    Interested in machine learning? Check out my <a href="http://machinelearningflashcards.com" class="alert-link">machine learning flashcards</a>.
+</div>
+
+<section id="content" class="body">
+    <header>
+    <h1>
+      {{ article.title }}
+    </h1>
+<ol class="breadcrumb">
+    <li>
+        <time class="published" datetime="{{ article.date.isoformat() }}">
+            {{ article.date.strftime("%d %B %Y") }}
+        </time>
+    </li>
+    <li>{{ article.category }}</li>
+    {% for tag in article.tags %}
+    <li>{{tag}}</li>
+    {% endfor %}
+</ol>
+</header>
+<div class='article_content'>
+{{ article.content }}
+</div>
+    <aside>
+    <div class="bug-reporting__panel">
+        <h3>Find an error or bug? Have a suggestion?</h3>
+        <p>Everything on this site is available on GitHub. Head on over and <a href='https://github.com/chrisalbon/notes_on_data_science_machine_learning_and_artificial_intelligence/issues/new'>submit an issue.</a> You can also message me directly on <a href='https://twitter.com/chrisalbon'>Twitter</a>.</p>
+    </div>
+    </aside>
+</section>
+
+{% endblock %}

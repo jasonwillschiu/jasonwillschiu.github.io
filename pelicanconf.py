@@ -12,6 +12,9 @@ TIMEZONE = 'Australia/Sydney'
 
 DEFAULT_LANG = 'English'
 
+# To modify pelican-blue theme
+LOAD_CONTENT_CACHE = False
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -33,21 +36,24 @@ SOCIAL = (('linkedin', 'https://www.linkedin.com/in/jason-chiu-476b5411b/'),
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
+#Need this for theme to work relative paths
 RELATIVE_URLS = True
 
-# For Dan's notebook plugin
+# For Dan's notebook plugin and render latex
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATHS = ['plugins','./plugins']
-PLUGINS = ['ipynb.markup']
+PLUGINS = ['render_math','ipynb.markup','sitemap','tipue_search']
+
+# To get latex equations rendered
+#PLUGINS = ["render_math"]
+
 
 # To use a theme
-THEME = 'pelican-blue'
+THEME = 'theme/chris'
+# THEME = 'notmyidea'
 
 # For pelican-blue theme
 SIDEBAR_DIGEST = 'Data Science Student'
-
-
 DISPLAY_PAGES_ON_MENU = True
-
 MENUITEMS = (('About','about.html'),('Blog','about.html'),('Resume','about.html'))
