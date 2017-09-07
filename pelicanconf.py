@@ -43,7 +43,7 @@ RELATIVE_URLS = True
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATHS = ['plugins','./plugins']
-PLUGINS = ['render_math','ipynb.markup','sitemap','tipue_search']
+PLUGINS = ['render_math','ipynb.markup','tipue_search']
 
 # To get latex equations rendered
 #PLUGINS = ["render_math"]
