@@ -26,8 +26,9 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('linkedin', 'https://www.linkedin.com/in/jason-chiu-476b5411b/'),
+          ('github', 'https://github.com/jasonwillschiu/jasonwillschiu.github.io')
+          )
 
 DEFAULT_PAGINATION = 10
 
@@ -39,3 +40,14 @@ MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATHS = ['plugins','./plugins']
 PLUGINS = ['ipynb.markup']
+
+# To use a theme
+THEME = 'pelican-blue'
+
+# For pelican-blue theme
+SIDEBAR_DIGEST = 'Data Science Student'
+
+
+DISPLAY_PAGES_ON_MENU = True
+
+MENUITEMS = (('About','about.html'),('Blog','about.html'),('Resume','about.html'))
