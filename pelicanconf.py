@@ -37,5 +37,5 @@ DEFAULT_PAGINATION = 10
 # For Dan's notebook plugin
 MARKUP = ('md', 'ipynb')
 
-PLUGIN_PATH = './plugins'
+PLUGIN_PATHS = ['plugins','./plugins']
 PLUGINS = ['ipynb.markup']
