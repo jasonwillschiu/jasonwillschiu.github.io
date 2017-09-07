@@ -33,7 +33,7 @@ SOCIAL = (('linkedin', 'https://www.linkedin.com/in/jason-chiu-476b5411b/'),
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 # For Dan's notebook plugin
 MARKUP = ('md', 'ipynb')
