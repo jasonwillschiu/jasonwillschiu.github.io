@@ -13,3 +13,6 @@ __pycache__
 
 # windows ini files
 *.ini
+
+# plugins causing trouble on github pages
+plugins
