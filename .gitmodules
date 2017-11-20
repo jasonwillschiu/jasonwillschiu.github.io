@@ -1,5 +1,0 @@
-[submodule "plugins/ipynb"]
-	url = https://github.com/danielfrg/pelican-ipynb
-[submodule "pelican-ipynb"]
-	path = pelican-ipynb
-	url = https://github.com/danielfrg/pelican-ipynb
