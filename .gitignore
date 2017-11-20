@@ -1,6 +1,3 @@
-# Pelican generated files
-output
-
 # Jupyter temp files
 .ipynb_checkpoints
 
@@ -13,3 +10,6 @@ __pycache__
 
 # OSX files
 .DS_Store
+
+# windows ini files
+*.ini
