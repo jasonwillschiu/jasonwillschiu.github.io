@@ -30,15 +30,15 @@ DEFAULT_PAGINATION = 10
 #PLUGINS = ['ipynb.markup']
 
 MARKUP = ['md','ipynb']
-PLUGIN_PATHS = ['./plugins', './plugins/pelican-plugins']
+PLUGIN_PATHS = ['./plugins/pelican-ipynb', './plugins/pelican-plugins']
 PLUGINS = [
     'summary',       # auto-summarizing articles
     'feed_summary',  # use summaries for RSS, not full articles
-    'ipynb.liquid',  # for embedding notebooks
+    'pelican-ipynb.liquid',  # for embedding notebooks
     'liquid_tags.img',  # embedding images
     'liquid_tags.video',  # embedding videos
     'liquid_tags.include_code',  # including code blocks
-    'ipynb.markup', # to use ipynb-meta i think
+    'pelican-ipynb.markup', # to use ipynb-meta i think
     'liquid_tags'
 
 ]
