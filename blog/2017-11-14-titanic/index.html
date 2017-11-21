@@ -440,8 +440,8 @@ article .meta a.comments_btn:hover {
 }</style>
 
         <!-- to view highcharts -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 
         <!-- Loading mathjax macro -->
         <!-- Load mathjax -->
@@ -1068,8 +1068,8 @@ div.output_area {
 div.output_area .MathJax_Display {
   text-align: left !important;
 }
-div.output_area 
-div.output_area 
+div.output_area
+div.output_area
 div.output_area img,
 div.output_area svg {
   max-width: 100%;
@@ -1329,7 +1329,7 @@ h6:hover .anchor-link {
 .text_cell.rendered .input_area {
   display: none;
 }
-.text_cell.rendered 
+.text_cell.rendered
 .text_cell.unrendered .text_cell_render {
   display: none;
 }
@@ -2296,7 +2296,7 @@ dtype: bool</pre>
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Replace missing values with 0 and Create easier to read Ports column for where someone embarked</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">'Embarked'</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">'EmbarkingPort'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Embarked</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">'C'</span> <span class="p">:</span> <span class="s1">'Cherbourg'</span><span class="p">,</span> <span class="s1">'Q'</span> <span class="p">:</span> <span class="s1">'Queenstown'</span><span class="p">,</span> 
+<span class="n">df</span><span class="p">[</span><span class="s1">'EmbarkingPort'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Embarked</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">'C'</span> <span class="p">:</span> <span class="s1">'Cherbourg'</span><span class="p">,</span> <span class="s1">'Q'</span> <span class="p">:</span> <span class="s1">'Queenstown'</span><span class="p">,</span>
                                        <span class="s1">'S'</span> <span class="p">:</span> <span class="s1">'Southampton'</span><span class="p">,</span> <span class="mi">0</span> <span class="p">:</span> <span class="s1">'Unknown'</span><span class="p">})</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'object'</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2321,7 +2321,7 @@ dtype: bool</pre>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Dropping variables we won't be using</span>
-<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'Name'</span><span class="p">,</span><span class="s1">'Pclass'</span><span class="p">,</span><span class="s1">'SibSp'</span><span class="p">,</span><span class="s1">'Parch'</span><span class="p">,</span><span class="s1">'Cabin'</span><span class="p">,</span><span class="s1">'Ticket'</span><span class="p">,</span><span class="s1">'Embarked'</span><span class="p">],</span> 
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'Name'</span><span class="p">,</span><span class="s1">'Pclass'</span><span class="p">,</span><span class="s1">'SibSp'</span><span class="p">,</span><span class="s1">'Parch'</span><span class="p">,</span><span class="s1">'Cabin'</span><span class="p">,</span><span class="s1">'Ticket'</span><span class="p">,</span><span class="s1">'Embarked'</span><span class="p">],</span>
         <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2554,14 +2554,14 @@ dtype: bool</pre>
 <div id="2739fa8f_e560_4700_9bd9_5ac651f6d8f6"><div id="2739fa8f_e560_4700_9bd9_5ac651f6d8f6container_chart"></div></div><script>
     // the Jupyter notebook loads jquery.min.js  and require.js and at the top of the page
     // then to make jquery available inside a require module
-    // the trick is http://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
+    // the trick is https://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
     define('jquery', [], function() {
         return jQuery;
     });
 
-    require(["jquery", "http://code.highcharts.com/stock/highstock.js", "http://d3js.org/d3.v3.min.js"], function() {
-        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "http://code.highcharts.com/stock/highcharts-more.js", "http://code.highcharts.com/modules/drilldown.js", "http://code.highcharts.com/modules/exporting.js", "http://code.highcharts.com/modules/heatmap.js", "http://code.highcharts.com/modules/treemap.js", "http://highcharts.github.io/export-csv/export-csv.js"], function() {
-            
+    require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
+        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
+
     var options = {"credits":{"enabled":false},"exporting":{"enabled":true},"chart":{"animation":false,"type":"pie","width":500,"height":500,"renderTo":"2739fa8f_e560_4700_9bd9_5ac651f6d8f6container_chart"},"series":[{"name":"Survival","yAxis":0,"data":[["Died",549],["Survived",342]]}],"plotOptions":{"series":{"animation":false},"line":{"animation":false},"column":{"animation":false},"bar":{"animation":false},"pie":{"animation":false,"showInLegend":false,"dataLabels":{"enabled":true,"distance":0,"format":"{point.name}: {point.percentage:.1f}%"},"colors":["black","green"]},"scatter":{"animation":false},"bubble":{"animation":false},"treemap":{"animation":false}},"tooltip":{"headerFormat":"<b>{point.key}<\/b><br>","pointFormat":"<b>{point.percentage:.1f}%<\/b> <br>{point.y} of 891"},"title":{"text":"Survival Percentage"}};
     options = JSON.stringify(options);
 
@@ -2591,7 +2591,7 @@ options = JSON.parse(options, function(key, value) {
     return value;
 });
 
-    
+
 
     var opt = $.extend(true, {}, options);
     if (window.opts==undefined) {
@@ -2600,12 +2600,12 @@ options = JSON.parse(options, function(key, value) {
     window.opts['2739fa8f_e560_4700_9bd9_5ac651f6d8f6'] = opt;
 
     console.log('Highcharts/Highstock options accessible as opts["2739fa8f_e560_4700_9bd9_5ac651f6d8f6"]');
-    
-            
+
+
             window.chart = new Highcharts.Chart(options);
-            
+
     console.log('Highcharts/Highstock chart accessible as charts["2739fa8f_e560_4700_9bd9_5ac651f6d8f6"]');
-    
+
         });
     });
     </script>
@@ -2652,14 +2652,14 @@ options = JSON.parse(options, function(key, value) {
 <div id="03ce8bff_2db2_4858_84d9_25265d97f7d1"><div id="03ce8bff_2db2_4858_84d9_25265d97f7d1container_chart"></div></div><script>
     // the Jupyter notebook loads jquery.min.js  and require.js and at the top of the page
     // then to make jquery available inside a require module
-    // the trick is http://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
+    // the trick is https://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
     define('jquery', [], function() {
         return jQuery;
     });
 
-    require(["jquery", "http://code.highcharts.com/stock/highstock.js", "http://d3js.org/d3.v3.min.js"], function() {
-        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "http://code.highcharts.com/stock/highcharts-more.js", "http://code.highcharts.com/modules/drilldown.js", "http://code.highcharts.com/modules/exporting.js", "http://code.highcharts.com/modules/heatmap.js", "http://code.highcharts.com/modules/treemap.js", "http://highcharts.github.io/export-csv/export-csv.js"], function() {
-            
+    require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
+        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
+
     var options = {"credits":{"enabled":false},"exporting":{"enabled":true},"chart":{"animation":false,"type":"pie","width":480,"height":480,"renderTo":"03ce8bff_2db2_4858_84d9_25265d97f7d1container_chart"},"series":[{"name":"Gender","yAxis":0,"data":[["Male",577],["Female",314]]}],"plotOptions":{"series":{"animation":false},"line":{"animation":false},"column":{"animation":false},"bar":{"animation":false},"pie":{"animation":false,"showInLegend":true,"dataLabels":{"enabled":true,"distance":0,"format":"{point.name}: {point.percentage:.1f}%"},"colors":["#434DF2","#F37161"]},"scatter":{"animation":false},"bubble":{"animation":false},"treemap":{"animation":false}},"tooltip":{"headerFormat":"<b>{point.key}<\/b><br>","pointFormat":"<b>{point.percentage:.1f}%<\/b> <br>{point.y} of 891"},"title":{"text":"Men and women on board"}};
     options = JSON.stringify(options);
 
@@ -2689,7 +2689,7 @@ options = JSON.parse(options, function(key, value) {
     return value;
 });
 
-    
+
 
     var opt = $.extend(true, {}, options);
     if (window.opts==undefined) {
@@ -2698,12 +2698,12 @@ options = JSON.parse(options, function(key, value) {
     window.opts['03ce8bff_2db2_4858_84d9_25265d97f7d1'] = opt;
 
     console.log('Highcharts/Highstock options accessible as opts["03ce8bff_2db2_4858_84d9_25265d97f7d1"]');
-    
-            
+
+
             window.chart = new Highcharts.Chart(options);
-            
+
     console.log('Highcharts/Highstock chart accessible as charts["03ce8bff_2db2_4858_84d9_25265d97f7d1"]');
-    
+
         });
     });
     </script>
@@ -2749,14 +2749,14 @@ options = JSON.parse(options, function(key, value) {
 <div id="95003a26_6d7f_4776_b999_bb92ba5e0327"><div id="95003a26_6d7f_4776_b999_bb92ba5e0327container_chart"></div></div><script>
     // the Jupyter notebook loads jquery.min.js  and require.js and at the top of the page
     // then to make jquery available inside a require module
-    // the trick is http://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
+    // the trick is https://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
     define('jquery', [], function() {
         return jQuery;
     });
 
-    require(["jquery", "http://code.highcharts.com/stock/highstock.js", "http://d3js.org/d3.v3.min.js"], function() {
-        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "http://code.highcharts.com/stock/highcharts-more.js", "http://code.highcharts.com/modules/drilldown.js", "http://code.highcharts.com/modules/exporting.js", "http://code.highcharts.com/modules/heatmap.js", "http://code.highcharts.com/modules/treemap.js", "http://highcharts.github.io/export-csv/export-csv.js"], function() {
-            
+    require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
+        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
+
     var options = {"credits":{"enabled":false},"exporting":{"enabled":true},"chart":{"animation":false,"type":"column","renderTo":"95003a26_6d7f_4776_b999_bb92ba5e0327container_chart"},"series":[{"name":"Age","yAxis":0,"data":[[28,204],[24,31],[22,27],[30,27],[18,26],[19,25],[21,24],[36,23],[25,23],[32,20],[29,20],[35,18],[27,18],[26,18],[31,17],[16,17],[23,16],[20,16],[34,16],[40,15],[33,15],[39,14],[45,14],[42,13],[17,13],[38,11],[50,10],[4,10],[2,10],[48,9],[47,9],[44,9],[9,8],[54,8],[14,7],[1,7],[0,7],[51,7],[3,6],[41,6],[49,6],[52,6],[37,6],[43,5],[15,5],[58,5],[60,4],[8,4],[11,4],[62,4],[5,4],[56,4],[61,3],[55,3],[70,3],[65,3],[46,3],[7,3],[6,3],[59,2],[57,2],[64,2],[13,2],[71,2],[10,2],[63,2],[74,1],[66,1],[12,1],[53,1],[80,1]]}],"plotOptions":{"series":{"animation":false},"line":{"animation":false},"column":{"animation":false,"groupPadding":0,"pointPadding":0,"borderWidth":0.5,"showInLegend":false},"bar":{"animation":false},"pie":{"animation":false},"scatter":{"animation":false},"bubble":{"animation":false},"treemap":{"animation":false}},"yAxis":{"title":{"text":"<b>Frequency<\/b>"}},"xAxis":{"title":{"text":"<b>Age<\/b>"}},"tooltip":{"headerFormat":"","pointFormat":"Age {point.x}: {point.y}"},"title":{"text":"Age Distribution"}};
     options = JSON.stringify(options);
 
@@ -2786,7 +2786,7 @@ options = JSON.parse(options, function(key, value) {
     return value;
 });
 
-    
+
 
     var opt = $.extend(true, {}, options);
     if (window.opts==undefined) {
@@ -2795,12 +2795,12 @@ options = JSON.parse(options, function(key, value) {
     window.opts['95003a26_6d7f_4776_b999_bb92ba5e0327'] = opt;
 
     console.log('Highcharts/Highstock options accessible as opts["95003a26_6d7f_4776_b999_bb92ba5e0327"]');
-    
-            
+
+
             window.chart = new Highcharts.Chart(options);
-            
+
     console.log('Highcharts/Highstock chart accessible as charts["95003a26_6d7f_4776_b999_bb92ba5e0327"]');
-    
+
         });
     });
     </script>
@@ -2854,14 +2854,14 @@ options = JSON.parse(options, function(key, value) {
 <div id="977fb9cb_fd7a_4698_972e_57cbbc5c60d9"><div id="977fb9cb_fd7a_4698_972e_57cbbc5c60d9container_chart"></div></div><script>
     // the Jupyter notebook loads jquery.min.js  and require.js and at the top of the page
     // then to make jquery available inside a require module
-    // the trick is http://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
+    // the trick is https://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
     define('jquery', [], function() {
         return jQuery;
     });
 
-    require(["jquery", "http://code.highcharts.com/stock/highstock.js", "http://d3js.org/d3.v3.min.js"], function() {
-        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "http://code.highcharts.com/stock/highcharts-more.js", "http://code.highcharts.com/modules/drilldown.js", "http://code.highcharts.com/modules/exporting.js", "http://code.highcharts.com/modules/heatmap.js", "http://code.highcharts.com/modules/treemap.js", "http://highcharts.github.io/export-csv/export-csv.js"], function() {
-            
+    require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
+        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
+
     var options = {"credits":{"enabled":false},"exporting":{"enabled":true},"chart":{"animation":false,"type":"pie","width":550,"height":550,"renderTo":"977fb9cb_fd7a_4698_972e_57cbbc5c60d9container_chart"},"series":[{"name":"EmbarkingPort","yAxis":0,"data":[["Southampton",644],["Cherbourg",168],["Queenstown",77],["Unknown",2]]}],"plotOptions":{"series":{"animation":false},"line":{"animation":false},"column":{"animation":false},"bar":{"animation":false},"pie":{"animation":false,"showInLegend":false,"dataLabels":{"enabled":true,"distance":10,"format":"{point.name}: {point.percentage:.1f}%"}},"scatter":{"animation":false},"bubble":{"animation":false},"treemap":{"animation":false}},"tooltip":{"headerFormat":"<b>{point.key}<\/b><br>","pointFormat":"<b>{point.percentage:.1f}%<\/b> <br>{point.y} of 891"},"title":{"text":"Embarking from the following locations"}};
     options = JSON.stringify(options);
 
@@ -2891,7 +2891,7 @@ options = JSON.parse(options, function(key, value) {
     return value;
 });
 
-    
+
 
     var opt = $.extend(true, {}, options);
     if (window.opts==undefined) {
@@ -2900,12 +2900,12 @@ options = JSON.parse(options, function(key, value) {
     window.opts['977fb9cb_fd7a_4698_972e_57cbbc5c60d9'] = opt;
 
     console.log('Highcharts/Highstock options accessible as opts["977fb9cb_fd7a_4698_972e_57cbbc5c60d9"]');
-    
-            
+
+
             window.chart = new Highcharts.Chart(options);
-            
+
     console.log('Highcharts/Highstock chart accessible as charts["977fb9cb_fd7a_4698_972e_57cbbc5c60d9"]');
-    
+
         });
     });
     </script>
@@ -2952,14 +2952,14 @@ options = JSON.parse(options, function(key, value) {
 <div id="3fac2d22_9a65_4aee_ae1b_995a512cb548"><div id="3fac2d22_9a65_4aee_ae1b_995a512cb548container_chart"></div></div><script>
     // the Jupyter notebook loads jquery.min.js  and require.js and at the top of the page
     // then to make jquery available inside a require module
-    // the trick is http://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
+    // the trick is https://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
     define('jquery', [], function() {
         return jQuery;
     });
 
-    require(["jquery", "http://code.highcharts.com/stock/highstock.js", "http://d3js.org/d3.v3.min.js"], function() {
-        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "http://code.highcharts.com/stock/highcharts-more.js", "http://code.highcharts.com/modules/drilldown.js", "http://code.highcharts.com/modules/exporting.js", "http://code.highcharts.com/modules/heatmap.js", "http://code.highcharts.com/modules/treemap.js", "http://highcharts.github.io/export-csv/export-csv.js"], function() {
-            
+    require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
+        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
+
     var options = {"credits":{"enabled":false},"exporting":{"enabled":true},"chart":{"animation":false,"type":"pie","width":550,"height":550,"renderTo":"3fac2d22_9a65_4aee_ae1b_995a512cb548container_chart"},"series":[{"name":"Class","yAxis":0,"data":[["Third Class",491],["First Class",216],["Second Class",184]]}],"plotOptions":{"series":{"animation":false},"line":{"animation":false},"column":{"animation":false},"bar":{"animation":false},"pie":{"animation":false,"showInLegend":false,"dataLabels":{"enabled":true,"distance":0,"format":"{point.name}: {point.percentage:.1f}%"},"colors":["#B6B6B6","#434DF2","#EC4242"]},"scatter":{"animation":false},"bubble":{"animation":false},"treemap":{"animation":false}},"tooltip":{"headerFormat":"<b>{point.key}<\/b><br>","pointFormat":"<b>{point.percentage:.1f}%<\/b> <br>{point.y} of 891"},"title":{"text":"Ticket Class distribution"}};
     options = JSON.stringify(options);
 
@@ -2989,7 +2989,7 @@ options = JSON.parse(options, function(key, value) {
     return value;
 });
 
-    
+
 
     var opt = $.extend(true, {}, options);
     if (window.opts==undefined) {
@@ -2998,12 +2998,12 @@ options = JSON.parse(options, function(key, value) {
     window.opts['3fac2d22_9a65_4aee_ae1b_995a512cb548'] = opt;
 
     console.log('Highcharts/Highstock options accessible as opts["3fac2d22_9a65_4aee_ae1b_995a512cb548"]');
-    
-            
+
+
             window.chart = new Highcharts.Chart(options);
-            
+
     console.log('Highcharts/Highstock chart accessible as charts["3fac2d22_9a65_4aee_ae1b_995a512cb548"]');
-    
+
         });
     });
     </script>
@@ -3049,14 +3049,14 @@ options = JSON.parse(options, function(key, value) {
 <div id="c1d64a89_e72d_472f_9045_6d59ac765ed5"><div id="c1d64a89_e72d_472f_9045_6d59ac765ed5container_chart"></div></div><script>
     // the Jupyter notebook loads jquery.min.js  and require.js and at the top of the page
     // then to make jquery available inside a require module
-    // the trick is http://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
+    // the trick is https://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
     define('jquery', [], function() {
         return jQuery;
     });
 
-    require(["jquery", "http://code.highcharts.com/stock/highstock.js", "http://d3js.org/d3.v3.min.js"], function() {
-        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "http://code.highcharts.com/stock/highcharts-more.js", "http://code.highcharts.com/modules/drilldown.js", "http://code.highcharts.com/modules/exporting.js", "http://code.highcharts.com/modules/heatmap.js", "http://code.highcharts.com/modules/treemap.js", "http://highcharts.github.io/export-csv/export-csv.js"], function() {
-            
+    require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
+        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
+
     var options = {"credits":{"enabled":false},"exporting":{"enabled":true},"chart":{"animation":false,"type":"column","renderTo":"c1d64a89_e72d_472f_9045_6d59ac765ed5container_chart"},"series":[{"name":"FarePaid","yAxis":0,"data":[[8.05,43],[13.0,42],[7.8958,38],[7.75,34],[26.0,31],[10.5,24],[7.925,18],[7.775,16],[26.55,15],[0.0,15],[7.2292,15],[7.8542,13],[8.6625,13],[7.25,13],[7.225,12],[16.1,9],[9.5,9],[24.15,8],[15.5,8],[56.4958,7],[52.0,7],[14.5,7],[14.4542,7],[69.55,7],[7.05,7],[31.275,7],[46.9,6],[30.0,6],[7.7958,6],[39.6875,6],[21.0,6],[27.9,6],[26.25,6],[27.7208,5],[30.5,5],[73.5,5],[53.1,5],[15.2458,5],[29.125,5],[34.375,4],[11.5,4],[21.075,4],[35.5,4],[12.475,4],[7.7333,4],[110.8833,4],[7.8792,4],[227.525,4],[79.2,4],[31.3875,4],[120.0,4],[27.75,4],[25.4667,4],[7.55,4],[39.0,4],[263.0,4],[151.55,4],[15.85,4],[7.125,4],[13.5,4],[90.0,4],[19.2583,4],[7.65,4],[23.0,4],[52.5542,3],[29.7,3],[86.5,3],[113.275,3],[20.525,3],[79.65,3],[76.7292,3],[14.4583,3],[211.3375,3],[18.75,3],[31.0,3],[11.1333,3],[26.2875,3],[512.3292,3],[135.6333,3],[41.5792,3],[7.4958,3],[12.35,3],[153.4625,3],[18.0,3],[77.9583,3],[33.0,3],[83.1583,3],[108.9,2],[20.575,2],[23.45,2],[66.6,2],[55.9,2],[80.0,2],[51.8625,2],[19.9667,2],[78.2667,2],[133.65,2],[56.9292,2],[29.0,2],[7.8292,2],[65.0,2],[9.0,2],[6.75,2],[9.5875,2],[30.6958,2],[146.5208,2],[18.7875,2],[6.4958,2],[71.0,2],[24.0,2],[23.25,2],[20.25,2],[17.8,2],[19.5,2],[49.5042,2],[27.0,2],[164.8667,2],[57.0,2],[134.5,2],[55.0,2],[9.225,2],[15.7417,2],[36.75,2],[83.475,2],[6.975,2],[9.825,2],[20.2125,2],[10.4625,2],[22.3583,2],[77.2875,2],[39.6,2],[25.9292,2],[14.4,2],[15.9,2],[93.5,2],[57.9792,2],[7.7375,2],[7.0542,2],[11.2417,2],[69.3,2],[78.85,2],[262.375,2],[106.425,2],[82.1708,2],[91.0792,2],[30.0708,2],[247.5208,2],[16.7,2],[9.35,2],[89.1042,2],[37.0042,2],[63.3583,1],[8.5167,1],[15.0,1],[15.1,1],[76.2917,1],[32.5,1],[49.5,1],[28.5,1],[35.0,1],[12.0,1],[38.5,1],[7.875,1],[9.4833,1],[71.2833,1],[12.875,1],[14.0,1],[7.0458,1],[75.25,1],[7.725,1],[16.0,1],[32.3208,1],[7.8,1],[15.0458,1],[6.8583,1],[8.4042,1],[7.7417,1],[21.6792,1],[6.45,1],[7.7875,1],[4.0125,1],[7.3125,1],[15.75,1],[33.5,1],[12.525,1],[55.4417,1],[50.0,1],[6.4375,1],[26.2833,1],[39.4,1],[9.8458,1],[8.85,1],[5.0,1],[9.2167,1],[40.125,1],[50.4958,1],[221.7792,1],[59.4,1],[10.5167,1],[12.65,1],[6.2375,1],[10.1708,1],[13.8625,1],[47.1,1],[15.05,1],[7.6292,1],[13.8583,1],[8.1583,1],[8.0292,1],[22.025,1],[15.55,1],[22.525,1],[25.925,1],[8.1375,1],[81.8583,1],[8.1125,1],[61.9792,1],[34.0208,1],[7.1417,1],[42.4,1],[211.5,1],[12.275,1],[61.175,1],[8.4333,1],[51.4792,1],[7.8875,1],[8.6833,1],[7.5208,1],[34.6542,1],[28.7125,1],[25.5875,1],[7.7292,1],[12.2875,1],[8.6542,1],[8.7125,1],[61.3792,1],[6.95,1],[9.8417,1],[8.3,1],[13.7917,1],[9.475,1],[13.4167,1],[26.3875,1],[8.4583,1],[9.8375,1],[8.3625,1],[14.1083,1],[17.4,1]]}],"plotOptions":{"series":{"animation":false},"line":{"animation":false},"column":{"animation":false,"groupPadding":0,"pointPadding":0,"borderWidth":0.5,"showInLegend":false},"bar":{"animation":false},"pie":{"animation":false},"scatter":{"animation":false},"bubble":{"animation":false},"treemap":{"animation":false}},"yAxis":{"title":{"text":"<b>Frequency<\/b>"}},"xAxis":{"title":{"text":"<b>Fare Paid for a ticket<\/b>"}},"tooltip":{"headerFormat":"","pointFormat":"Fare Paid \u00a3{point.x:.2f}, Frequency {point.y}"},"title":{"text":"Fare Paid"}};
     options = JSON.stringify(options);
 
@@ -3086,7 +3086,7 @@ options = JSON.parse(options, function(key, value) {
     return value;
 });
 
-    
+
 
     var opt = $.extend(true, {}, options);
     if (window.opts==undefined) {
@@ -3095,12 +3095,12 @@ options = JSON.parse(options, function(key, value) {
     window.opts['c1d64a89_e72d_472f_9045_6d59ac765ed5'] = opt;
 
     console.log('Highcharts/Highstock options accessible as opts["c1d64a89_e72d_472f_9045_6d59ac765ed5"]');
-    
-            
+
+
             window.chart = new Highcharts.Chart(options);
-            
+
     console.log('Highcharts/Highstock chart accessible as charts["c1d64a89_e72d_472f_9045_6d59ac765ed5"]');
-    
+
         });
     });
     </script>
@@ -3339,14 +3339,14 @@ options = JSON.parse(options, function(key, value) {
 <div id="2ec31d74_28f6_488e_a98e_2abae4a7cbe5"><div id="2ec31d74_28f6_488e_a98e_2abae4a7cbe5container_chart"></div></div><script>
     // the Jupyter notebook loads jquery.min.js  and require.js and at the top of the page
     // then to make jquery available inside a require module
-    // the trick is http://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
+    // the trick is https://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
     define('jquery', [], function() {
         return jQuery;
     });
 
-    require(["jquery", "http://code.highcharts.com/stock/highstock.js", "http://d3js.org/d3.v3.min.js"], function() {
-        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "http://code.highcharts.com/stock/highcharts-more.js", "http://code.highcharts.com/modules/drilldown.js", "http://code.highcharts.com/modules/exporting.js", "http://code.highcharts.com/modules/heatmap.js", "http://code.highcharts.com/modules/treemap.js", "http://highcharts.github.io/export-csv/export-csv.js"], function() {
-            
+    require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
+        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
+
     var options = {"credits":{"enabled":false},"exporting":{"enabled":true},"chart":{"animation":false,"type":"column","renderTo":"2ec31d74_28f6_488e_a98e_2abae4a7cbe5container_chart"},"series":[{"name":"Died","yAxis":0,"data":[["Female",81],["Male",468]],"color":"black"},{"name":"Survived","yAxis":0,"data":[["Female",233],["Male",109]],"color":"green"}],"plotOptions":{"series":{"animation":false},"line":{"animation":false},"column":{"animation":false,"stacking":"percent","showInLegend":true},"bar":{"animation":false},"pie":{"animation":false},"scatter":{"animation":false},"bubble":{"animation":false},"treemap":{"animation":false}},"yAxis":{"title":{"text":"<b>Percentage<\/b>"},"labels":{"format":"{value}%"}},"xAxis":{"title":{"text":"<b>Gender<\/b>"},"categories":["Female","Male"]},"tooltip":{"headerFormat":"","pointFormat":"<span style=\"color:{series.color}\">{series.name}<\/span>: <b>{point.y}<\/b> ({point.percentage:.1f}%)<br\/>","shared":"True"},"title":{"text":"Survival by Gender"}};
     options = JSON.stringify(options);
 
@@ -3376,7 +3376,7 @@ options = JSON.parse(options, function(key, value) {
     return value;
 });
 
-    
+
 
     var opt = $.extend(true, {}, options);
     if (window.opts==undefined) {
@@ -3385,12 +3385,12 @@ options = JSON.parse(options, function(key, value) {
     window.opts['2ec31d74_28f6_488e_a98e_2abae4a7cbe5'] = opt;
 
     console.log('Highcharts/Highstock options accessible as opts["2ec31d74_28f6_488e_a98e_2abae4a7cbe5"]');
-    
-            
+
+
             window.chart = new Highcharts.Chart(options);
-            
+
     console.log('Highcharts/Highstock chart accessible as charts["2ec31d74_28f6_488e_a98e_2abae4a7cbe5"]');
-    
+
         });
     });
     </script>
@@ -3553,7 +3553,7 @@ We have a statistically significant value here. Thus we reject $H_{0}$ in favour
 <h3 id="Cramer's-V-table">Cramer's V table<a class="anchor-link" href="#Cramer's-V-table">¶</a></h3><table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="width: 565px; float: left;"><colgroup><col width="60"/><col width="65"/><col width="169"/></colgroup>
 <tbody>
 <tr style="height: 41px;">
-<td data-sheets-value='{"1":2,"2":"LEVEL OF ASSOCIATION"}' style="width: 22px; height: 41px; text-align: left;"><strong>Cramer's V 
+<td data-sheets-value='{"1":2,"2":"LEVEL OF ASSOCIATION"}' style="width: 22px; height: 41px; text-align: left;"><strong>Cramer's V
 Result</strong></td>
 <td data-sheets-value='{"1":2,"2":"Verbal Description"}' style="width: 22px; height: 41px; text-align: left;"><strong>Verbal Description</strong></td>
 <td data-sheets-value='{"1":2,"2":"COMMENTS"}' style="width: 22px; height: 41px; text-align: left;"><strong>Comments</strong></td>
@@ -3648,7 +3648,7 @@ Result</strong></td>
 <div class="prompt input_prompt">In [36]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Cramer</span><span class="se">\'</span><span class="s1">s V ='</span><span class="p">,</span><span class="n">cramersV</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">ctGender</span><span class="o">.</span><span class="n">index</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">ctGender</span><span class="o">.</span><span class="n">columns</span><span class="p">),</span><span class="n">chi2</span><span class="p">))</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Cramer</span><span class="se">\'</span><span class="s1">s V ='</span><span class="p">,</span><span class="n">cramersV</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">ctGender</span><span class="o">.</span><span class="n">index</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">ctGender</span><span class="o">.</span><span class="n">columns</span><span class="p">),</span><span class="n">chi2</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -3861,14 +3861,14 @@ Result</strong></td>
 <div id="e6f80072_f576_4f97_a57c_1de052128ecb"><div id="e6f80072_f576_4f97_a57c_1de052128ecbcontainer_chart"></div></div><script>
     // the Jupyter notebook loads jquery.min.js  and require.js and at the top of the page
     // then to make jquery available inside a require module
-    // the trick is http://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
+    // the trick is https://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
     define('jquery', [], function() {
         return jQuery;
     });
 
-    require(["jquery", "http://code.highcharts.com/stock/highstock.js", "http://d3js.org/d3.v3.min.js"], function() {
-        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "http://code.highcharts.com/stock/highcharts-more.js", "http://code.highcharts.com/modules/drilldown.js", "http://code.highcharts.com/modules/exporting.js", "http://code.highcharts.com/modules/heatmap.js", "http://code.highcharts.com/modules/treemap.js", "http://highcharts.github.io/export-csv/export-csv.js"], function() {
-            
+    require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
+        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
+
     var options = {"credits":{"enabled":false},"exporting":{"enabled":true},"chart":{"animation":false,"type":"column","renderTo":"e6f80072_f576_4f97_a57c_1de052128ecbcontainer_chart"},"series":[{"name":"Died","yAxis":0,"data":[["0-9",24],["10-19",61],["20-29",268],["30-39",94],["40-49",55],["50-59",28],["60-69",13],["70-80",6]],"color":"black"},{"name":"Survived","yAxis":0,"data":[["0-9",38],["10-19",41],["20-29",129],["30-39",73],["40-49",34],["50-59",20],["60-69",6],["70-80",1]],"color":"green"}],"plotOptions":{"series":{"animation":false},"line":{"animation":false},"column":{"animation":false,"showInLegend":true},"bar":{"animation":false},"pie":{"animation":false},"scatter":{"animation":false},"bubble":{"animation":false},"treemap":{"animation":false}},"yAxis":{"title":{"text":"<b>Frequency<\/b>"}},"xAxis":{"title":{"text":"<b>Age Groups<\/b>"},"categories":["0-9","10-19","20-29","30-39","40-49","50-59","60-69","70-80"]},"tooltip":{"headerFormat":"","shared":"True"},"title":{"text":"Survival by Age Group"}};
     options = JSON.stringify(options);
 
@@ -3898,7 +3898,7 @@ options = JSON.parse(options, function(key, value) {
     return value;
 });
 
-    
+
 
     var opt = $.extend(true, {}, options);
     if (window.opts==undefined) {
@@ -3907,12 +3907,12 @@ options = JSON.parse(options, function(key, value) {
     window.opts['e6f80072_f576_4f97_a57c_1de052128ecb'] = opt;
 
     console.log('Highcharts/Highstock options accessible as opts["e6f80072_f576_4f97_a57c_1de052128ecb"]');
-    
-            
+
+
             window.chart = new Highcharts.Chart(options);
-            
+
     console.log('Highcharts/Highstock chart accessible as charts["e6f80072_f576_4f97_a57c_1de052128ecb"]');
-    
+
         });
     });
     </script>
@@ -3967,14 +3967,14 @@ options = JSON.parse(options, function(key, value) {
 <div id="090e7858_aa03_4389_8cce_63e3846bb644"><div id="090e7858_aa03_4389_8cce_63e3846bb644container_chart"></div></div><script>
     // the Jupyter notebook loads jquery.min.js  and require.js and at the top of the page
     // then to make jquery available inside a require module
-    // the trick is http://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
+    // the trick is https://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
     define('jquery', [], function() {
         return jQuery;
     });
 
-    require(["jquery", "http://code.highcharts.com/stock/highstock.js", "http://d3js.org/d3.v3.min.js"], function() {
-        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "http://code.highcharts.com/stock/highcharts-more.js", "http://code.highcharts.com/modules/drilldown.js", "http://code.highcharts.com/modules/exporting.js", "http://code.highcharts.com/modules/heatmap.js", "http://code.highcharts.com/modules/treemap.js", "http://highcharts.github.io/export-csv/export-csv.js"], function() {
-            
+    require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
+        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
+
     var options = {"credits":{"enabled":false},"exporting":{"enabled":true},"chart":{"animation":false,"type":"column","renderTo":"090e7858_aa03_4389_8cce_63e3846bb644container_chart"},"series":[{"name":"Died","yAxis":0,"data":[["0-9",24],["10-19",61],["20-29",268],["30-39",94],["40-49",55],["50-59",28],["60-69",13],["70-80",6]],"color":"black"},{"name":"Survived","yAxis":0,"data":[["0-9",38],["10-19",41],["20-29",129],["30-39",73],["40-49",34],["50-59",20],["60-69",6],["70-80",1]],"color":"green"}],"plotOptions":{"series":{"animation":false},"line":{"animation":false},"column":{"animation":false,"stacking":"percent","showInLegend":true},"bar":{"animation":false},"pie":{"animation":false},"scatter":{"animation":false},"bubble":{"animation":false},"treemap":{"animation":false}},"yAxis":{"title":{"text":"<b>Percentage<\/b>"},"labels":{"format":"{value}%"}},"xAxis":{"title":{"text":"<b>Age Groups<\/b>"},"categories":["0-9","10-19","20-29","30-39","40-49","50-59","60-69","70-80"]},"tooltip":{"headerFormat":"","pointFormat":"<span style=\"color:{series.color}\">{series.name}<\/span>: <b>{point.y}<\/b> ({point.percentage:.1f}%)<br\/>","shared":"True"},"title":{"text":"Survival by Age Group"}};
     options = JSON.stringify(options);
 
@@ -4004,7 +4004,7 @@ options = JSON.parse(options, function(key, value) {
     return value;
 });
 
-    
+
 
     var opt = $.extend(true, {}, options);
     if (window.opts==undefined) {
@@ -4013,12 +4013,12 @@ options = JSON.parse(options, function(key, value) {
     window.opts['090e7858_aa03_4389_8cce_63e3846bb644'] = opt;
 
     console.log('Highcharts/Highstock options accessible as opts["090e7858_aa03_4389_8cce_63e3846bb644"]');
-    
-            
+
+
             window.chart = new Highcharts.Chart(options);
-            
+
     console.log('Highcharts/Highstock chart accessible as charts["090e7858_aa03_4389_8cce_63e3846bb644"]');
-    
+
         });
     });
     </script>
@@ -4288,14 +4288,14 @@ We have a statistically significant value.</p>
 <div id="0e08d39d_fe2f_40e4_87c4_6d64c1b5646a"><div id="0e08d39d_fe2f_40e4_87c4_6d64c1b5646acontainer_chart"></div></div><script>
     // the Jupyter notebook loads jquery.min.js  and require.js and at the top of the page
     // then to make jquery available inside a require module
-    // the trick is http://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
+    // the trick is https://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
     define('jquery', [], function() {
         return jQuery;
     });
 
-    require(["jquery", "http://code.highcharts.com/stock/highstock.js", "http://d3js.org/d3.v3.min.js"], function() {
-        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "http://code.highcharts.com/stock/highcharts-more.js", "http://code.highcharts.com/modules/drilldown.js", "http://code.highcharts.com/modules/exporting.js", "http://code.highcharts.com/modules/heatmap.js", "http://code.highcharts.com/modules/treemap.js", "http://highcharts.github.io/export-csv/export-csv.js"], function() {
-            
+    require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
+        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
+
     var options = {"credits":{"enabled":false},"exporting":{"enabled":true},"chart":{"animation":false,"type":"column","renderTo":"0e08d39d_fe2f_40e4_87c4_6d64c1b5646acontainer_chart"},"series":[{"name":"Died","yAxis":0,"data":[[["Female","0-9"],11],[["Female","10-19"],11],[["Female","20-29"],37],[["Female","30-39"],10],[["Female","40-49"],10],[["Female","50-59"],2],[["Female","60-69"],0],[["Male","0-9"],13],[["Male","10-19"],50],[["Male","20-29"],231],[["Male","30-39"],84],[["Male","40-49"],45],[["Male","50-59"],26],[["Male","60-69"],13],[["Male","70-80"],6]],"color":"black"},{"name":"Survived","yAxis":0,"data":[[["Female","0-9"],19],[["Female","10-19"],34],[["Female","20-29"],88],[["Female","30-39"],50],[["Female","40-49"],22],[["Female","50-59"],16],[["Female","60-69"],4],[["Male","0-9"],19],[["Male","10-19"],7],[["Male","20-29"],41],[["Male","30-39"],23],[["Male","40-49"],12],[["Male","50-59"],4],[["Male","60-69"],2],[["Male","70-80"],1]],"color":"green"}],"plotOptions":{"series":{"animation":false},"line":{"animation":false},"column":{"animation":false,"showInLegend":true,"stacking":"percent"},"bar":{"animation":false},"pie":{"animation":false},"scatter":{"animation":false},"bubble":{"animation":false},"treemap":{"animation":false}},"yAxis":{"title":{"text":"<b>Frequency<\/b>"},"labels":{"format":"{value}%"}},"xAxis":{"title":{"text":"<b>Age Groups<\/b>"},"categories":[["Female","0-9"],["Female","10-19"],["Female","20-29"],["Female","30-39"],["Female","40-49"],["Female","50-59"],["Female","60-69"],["Male","0-9"],["Male","10-19"],["Male","20-29"],["Male","30-39"],["Male","40-49"],["Male","50-59"],["Male","60-69"],["Male","70-80"]]},"tooltip":{"headerFormat":"","pointFormat":"<span style=\"color:{series.color}\">{series.name}<\/span>: <b>{point.y}<\/b> ({point.percentage:.1f}%)<br\/>","shared":"True"},"title":{"text":"Survival by Age Group"}};
     options = JSON.stringify(options);
 
@@ -4325,7 +4325,7 @@ options = JSON.parse(options, function(key, value) {
     return value;
 });
 
-    
+
 
     var opt = $.extend(true, {}, options);
     if (window.opts==undefined) {
@@ -4334,12 +4334,12 @@ options = JSON.parse(options, function(key, value) {
     window.opts['0e08d39d_fe2f_40e4_87c4_6d64c1b5646a'] = opt;
 
     console.log('Highcharts/Highstock options accessible as opts["0e08d39d_fe2f_40e4_87c4_6d64c1b5646a"]');
-    
-            
+
+
             window.chart = new Highcharts.Chart(options);
-            
+
     console.log('Highcharts/Highstock chart accessible as charts["0e08d39d_fe2f_40e4_87c4_6d64c1b5646a"]');
-    
+
         });
     });
     </script>
@@ -4500,14 +4500,14 @@ options = JSON.parse(options, function(key, value) {
 <div id="0787f39c_cd77_4728_bbd5_40f74b080943"><div id="0787f39c_cd77_4728_bbd5_40f74b080943container_chart"></div></div><script>
     // the Jupyter notebook loads jquery.min.js  and require.js and at the top of the page
     // then to make jquery available inside a require module
-    // the trick is http://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
+    // the trick is https://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
     define('jquery', [], function() {
         return jQuery;
     });
 
-    require(["jquery", "http://code.highcharts.com/stock/highstock.js", "http://d3js.org/d3.v3.min.js"], function() {
-        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "http://code.highcharts.com/stock/highcharts-more.js", "http://code.highcharts.com/modules/drilldown.js", "http://code.highcharts.com/modules/exporting.js", "http://code.highcharts.com/modules/heatmap.js", "http://code.highcharts.com/modules/treemap.js", "http://highcharts.github.io/export-csv/export-csv.js"], function() {
-            
+    require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
+        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
+
     var options = {"credits":{"enabled":false},"exporting":{"enabled":true},"chart":{"animation":false,"type":"column","renderTo":"0787f39c_cd77_4728_bbd5_40f74b080943container_chart"},"series":[{"name":"Died","yAxis":0,"data":[["Cherbourg",75],["Queenstown",47],["Southampton",427],["Unknown",0]],"color":"black"},{"name":"Survived","yAxis":0,"data":[["Cherbourg",93],["Queenstown",30],["Southampton",217],["Unknown",2]],"color":"green"}],"plotOptions":{"series":{"animation":false},"line":{"animation":false},"column":{"animation":false,"stacking":"percent","showInLegend":true},"bar":{"animation":false},"pie":{"animation":false},"scatter":{"animation":false},"bubble":{"animation":false},"treemap":{"animation":false}},"yAxis":{"title":{"text":"<b>Percentage<\/b>"},"labels":{"format":"{value}%"}},"xAxis":{"title":{"text":"<b>Embarking Ports<\/b>"},"categories":["Cherbourg","Queenstown","Southampton","Unknown"]},"tooltip":{"headerFormat":"","pointFormat":"<span style=\"color:{series.color}\">{series.name}<\/span>: <b>{point.y}<\/b> ({point.percentage:.1f}%)<br\/>","shared":"True"},"title":{"text":"Survival by Embarking Ports"}};
     options = JSON.stringify(options);
 
@@ -4537,7 +4537,7 @@ options = JSON.parse(options, function(key, value) {
     return value;
 });
 
-    
+
 
     var opt = $.extend(true, {}, options);
     if (window.opts==undefined) {
@@ -4546,12 +4546,12 @@ options = JSON.parse(options, function(key, value) {
     window.opts['0787f39c_cd77_4728_bbd5_40f74b080943'] = opt;
 
     console.log('Highcharts/Highstock options accessible as opts["0787f39c_cd77_4728_bbd5_40f74b080943"]');
-    
-            
+
+
             window.chart = new Highcharts.Chart(options);
-            
+
     console.log('Highcharts/Highstock chart accessible as charts["0787f39c_cd77_4728_bbd5_40f74b080943"]');
-    
+
         });
     });
     </script>
@@ -4757,14 +4757,14 @@ We have a statistically significant value.</p>
 <div id="dfcc0fa8_5e8a_4b19_b65c_d4eb82a23e52"><div id="dfcc0fa8_5e8a_4b19_b65c_d4eb82a23e52container_chart"></div></div><script>
     // the Jupyter notebook loads jquery.min.js  and require.js and at the top of the page
     // then to make jquery available inside a require module
-    // the trick is http://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
+    // the trick is https://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
     define('jquery', [], function() {
         return jQuery;
     });
 
-    require(["jquery", "http://code.highcharts.com/stock/highstock.js", "http://d3js.org/d3.v3.min.js"], function() {
-        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "http://code.highcharts.com/stock/highcharts-more.js", "http://code.highcharts.com/modules/drilldown.js", "http://code.highcharts.com/modules/exporting.js", "http://code.highcharts.com/modules/heatmap.js", "http://code.highcharts.com/modules/treemap.js", "http://highcharts.github.io/export-csv/export-csv.js"], function() {
-            
+    require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
+        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
+
     var options = {"credits":{"enabled":false},"exporting":{"enabled":true},"chart":{"animation":false,"type":"column","renderTo":"dfcc0fa8_5e8a_4b19_b65c_d4eb82a23e52container_chart"},"series":[{"name":"Died","yAxis":0,"data":[["First Class",80],["Second Class",97],["Third Class",372]],"color":"black"},{"name":"Survived","yAxis":0,"data":[["First Class",136],["Second Class",87],["Third Class",119]],"color":"green"}],"plotOptions":{"series":{"animation":false},"line":{"animation":false},"column":{"animation":false,"stacking":"percent","showInLegend":true},"bar":{"animation":false},"pie":{"animation":false},"scatter":{"animation":false},"bubble":{"animation":false},"treemap":{"animation":false}},"yAxis":{"title":{"text":"<b>Percentage<\/b>"},"labels":{"format":"{value}%"}},"xAxis":{"title":{"text":"<b>Ticket Class<\/b>"},"categories":["First Class","Second Class","Third Class"]},"tooltip":{"headerFormat":"","pointFormat":"<span style=\"color:{series.color}\">{series.name}<\/span>: <b>{point.y}<\/b> ({point.percentage:.1f}%)<br\/>","shared":"True"},"title":{"text":"Survival by Ticket Class"}};
     options = JSON.stringify(options);
 
@@ -4794,7 +4794,7 @@ options = JSON.parse(options, function(key, value) {
     return value;
 });
 
-    
+
 
     var opt = $.extend(true, {}, options);
     if (window.opts==undefined) {
@@ -4803,12 +4803,12 @@ options = JSON.parse(options, function(key, value) {
     window.opts['dfcc0fa8_5e8a_4b19_b65c_d4eb82a23e52'] = opt;
 
     console.log('Highcharts/Highstock options accessible as opts["dfcc0fa8_5e8a_4b19_b65c_d4eb82a23e52"]');
-    
-            
+
+
             window.chart = new Highcharts.Chart(options);
-            
+
     console.log('Highcharts/Highstock chart accessible as charts["dfcc0fa8_5e8a_4b19_b65c_d4eb82a23e52"]');
-    
+
         });
     });
     </script>
@@ -5035,14 +5035,14 @@ We have a statistically significant value.</p>
 <div id="9f42d22d_990f_4492_b3a4_d94b68403939"><div id="9f42d22d_990f_4492_b3a4_d94b68403939container_chart"></div></div><script>
     // the Jupyter notebook loads jquery.min.js  and require.js and at the top of the page
     // then to make jquery available inside a require module
-    // the trick is http://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
+    // the trick is https://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
     define('jquery', [], function() {
         return jQuery;
     });
 
-    require(["jquery", "http://code.highcharts.com/stock/highstock.js", "http://d3js.org/d3.v3.min.js"], function() {
-        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "http://code.highcharts.com/stock/highcharts-more.js", "http://code.highcharts.com/modules/drilldown.js", "http://code.highcharts.com/modules/exporting.js", "http://code.highcharts.com/modules/heatmap.js", "http://code.highcharts.com/modules/treemap.js", "http://highcharts.github.io/export-csv/export-csv.js"], function() {
-            
+    require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
+        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
+
     var options = {"credits":{"enabled":false},"exporting":{"enabled":true},"chart":{"animation":false,"type":"scatter","zoomType":"xy","renderTo":"9f42d22d_990f_4492_b3a4_d94b68403939container_chart"},"series":[{"name":"Died","yAxis":0,"data":[[0.0,14.0],[4.0125,1.0],[5.0,1.0],[6.2375,1.0],[6.4375,1.0],[6.45,1.0],[6.4958,2.0],[6.75,2.0],[6.8583,1.0],[6.95,1.0],[6.975,1.0],[7.0458,1.0],[7.05,7.0],[7.0542,2.0],[7.125,4.0],[7.1417,null],[7.225,9.0],[7.2292,11.0],[7.25,12.0],[7.3125,1.0],[7.4958,2.0],[7.5208,1.0],[7.55,3.0],[7.6292,1.0],[7.65,3.0],[7.725,1.0],[7.7292,1.0],[7.7333,2.0],[7.7375,1.0],[7.7417,1.0],[7.75,22.0],[7.775,13.0],[7.7875,null],[7.7958,4.0],[7.8,1.0],[7.8292,1.0],[7.8542,10.0],[7.875,1.0],[7.8792,null],[7.8875,1.0],[7.8958,37.0],[7.925,10.0],[8.0292,null],[8.05,38.0],[8.1125,null],[8.1375,1.0],[8.1583,1.0],[8.3,1.0],[8.3625,1.0],[8.4042,1.0],[8.4333,1.0],[8.4583,1.0],[8.5167,null],[8.6542,1.0],[8.6625,12.0],[8.6833,null],[8.7125,1.0],[8.85,1.0],[9.0,2.0],[9.2167,1.0],[9.225,2.0],[9.35,1.0],[9.475,1.0],[9.4833,1.0],[9.5,7.0],[9.5875,1.0],[9.825,2.0],[9.8375,1.0],[9.8417,null],[9.8458,1.0],[10.1708,1.0],[10.4625,2.0],[10.5,15.0],[10.5167,1.0],[11.1333,null],[11.2417,null],[11.5,4.0],[12.0,null],[12.275,1.0],[12.2875,null],[12.35,1.0],[12.475,null],[12.525,1.0],[12.65,null],[12.875,1.0],[13.0,26.0],[13.4167,null],[13.5,3.0],[13.7917,null],[13.8583,null],[13.8625,null],[14.0,1.0],[14.1083,1.0],[14.4,2.0],[14.4542,6.0],[14.4583,3.0],[14.5,5.0],[15.0,1.0],[15.0458,1.0],[15.05,1.0],[15.1,1.0],[15.2458,2.0],[15.5,5.0],[15.55,1.0],[15.7417,null],[15.75,null],[15.85,2.0],[15.9,null],[16.0,null],[16.1,7.0],[16.7,null],[17.4,null],[17.8,2.0],[18.0,3.0],[18.75,null],[18.7875,1.0],[19.2583,null],[19.5,null],[19.9667,2.0],[20.2125,2.0],[20.25,1.0],[20.525,1.0],[20.575,1.0],[21.0,4.0],[21.075,4.0],[21.6792,1.0],[22.025,null],[22.3583,null],[22.525,1.0],[23.0,null],[23.25,null],[23.45,2.0],[24.0,1.0],[24.15,7.0],[25.4667,4.0],[25.5875,1.0],[25.925,1.0],[25.9292,null],[26.0,16.0],[26.25,2.0],[26.2833,null],[26.2875,null],[26.3875,null],[26.55,7.0],[27.0,1.0],[27.7208,4.0],[27.75,2.0],[27.9,6.0],[28.5,1.0],[28.7125,1.0],[29.0,null],[29.125,5.0],[29.7,2.0],[30.0,1.0],[30.0708,1.0],[30.5,1.0],[30.6958,2.0],[31.0,1.0],[31.275,7.0],[31.3875,1.0],[32.3208,1.0],[32.5,null],[33.0,1.0],[33.5,1.0],[34.0208,1.0],[34.375,4.0],[34.6542,1.0],[35.0,1.0],[35.5,1.0],[36.75,1.0],[37.0042,1.0],[38.5,1.0],[39.0,1.0],[39.4,null],[39.6,1.0],[39.6875,6.0],[40.125,1.0],[41.5792,1.0],[42.4,1.0],[46.9,6.0],[47.1,1.0],[49.5,null],[49.5042,1.0],[50.0,1.0],[50.4958,1.0],[51.4792,null],[51.8625,1.0],[52.0,4.0],[52.5542,null],[53.1,2.0],[55.0,null],[55.4417,null],[55.9,1.0],[56.4958,2.0],[56.9292,null],[57.0,null],[57.9792,null],[59.4,null],[61.175,1.0],[61.3792,1.0],[61.9792,1.0],[63.3583,null],[65.0,null],[66.6,1.0],[69.3,null],[69.55,7.0],[71.0,1.0],[71.2833,null],[73.5,5.0],[75.25,null],[76.2917,null],[76.7292,null],[77.2875,2.0],[77.9583,null],[78.2667,null],[78.85,1.0],[79.2,2.0],[79.65,1.0],[80.0,null],[81.8583,null],[82.1708,1.0],[83.1583,null],[83.475,1.0],[86.5,null],[89.1042,null],[90.0,1.0],[91.0792,null],[93.5,null],[106.425,1.0],[108.9,1.0],[110.8833,1.0],[113.275,1.0],[120.0,null],[133.65,null],[134.5,null],[135.6333,1.0],[146.5208,null],[151.55,2.0],[153.4625,1.0],[164.8667,null],[211.3375,null],[211.5,1.0],[221.7792,1.0],[227.525,1.0],[247.5208,1.0],[262.375,null],[263.0,2.0],[512.3292,null]],"color":"rgba(0,0,0,0.7)"},{"name":"Survived","yAxis":0,"data":[[0.0,1.0],[4.0125,null],[5.0,null],[6.2375,null],[6.4375,null],[6.45,null],[6.4958,null],[6.75,null],[6.8583,null],[6.95,null],[6.975,1.0],[7.0458,null],[7.05,null],[7.0542,null],[7.125,null],[7.1417,1.0],[7.225,3.0],[7.2292,4.0],[7.25,1.0],[7.3125,null],[7.4958,1.0],[7.5208,null],[7.55,1.0],[7.6292,null],[7.65,1.0],[7.725,null],[7.7292,null],[7.7333,2.0],[7.7375,1.0],[7.7417,null],[7.75,12.0],[7.775,3.0],[7.7875,1.0],[7.7958,2.0],[7.8,null],[7.8292,1.0],[7.8542,3.0],[7.875,null],[7.8792,4.0],[7.8875,null],[7.8958,1.0],[7.925,8.0],[8.0292,1.0],[8.05,5.0],[8.1125,1.0],[8.1375,null],[8.1583,null],[8.3,null],[8.3625,null],[8.4042,null],[8.4333,null],[8.4583,null],[8.5167,1.0],[8.6542,null],[8.6625,1.0],[8.6833,1.0],[8.7125,null],[8.85,null],[9.0,null],[9.2167,null],[9.225,null],[9.35,1.0],[9.475,null],[9.4833,null],[9.5,2.0],[9.5875,1.0],[9.825,null],[9.8375,null],[9.8417,1.0],[9.8458,null],[10.1708,null],[10.4625,null],[10.5,9.0],[10.5167,null],[11.1333,3.0],[11.2417,2.0],[11.5,null],[12.0,1.0],[12.275,null],[12.2875,1.0],[12.35,2.0],[12.475,4.0],[12.525,null],[12.65,1.0],[12.875,null],[13.0,16.0],[13.4167,1.0],[13.5,1.0],[13.7917,1.0],[13.8583,1.0],[13.8625,1.0],[14.0,null],[14.1083,null],[14.4,null],[14.4542,1.0],[14.4583,null],[14.5,2.0],[15.0,null],[15.0458,null],[15.05,null],[15.1,null],[15.2458,3.0],[15.5,3.0],[15.55,null],[15.7417,2.0],[15.75,1.0],[15.85,2.0],[15.9,2.0],[16.0,1.0],[16.1,2.0],[16.7,2.0],[17.4,1.0],[17.8,null],[18.0,null],[18.75,3.0],[18.7875,1.0],[19.2583,4.0],[19.5,2.0],[19.9667,null],[20.2125,null],[20.25,1.0],[20.525,2.0],[20.575,1.0],[21.0,2.0],[21.075,null],[21.6792,null],[22.025,1.0],[22.3583,2.0],[22.525,null],[23.0,4.0],[23.25,2.0],[23.45,null],[24.0,1.0],[24.15,1.0],[25.4667,null],[25.5875,null],[25.925,null],[25.9292,2.0],[26.0,15.0],[26.25,4.0],[26.2833,1.0],[26.2875,3.0],[26.3875,1.0],[26.55,8.0],[27.0,1.0],[27.7208,1.0],[27.75,2.0],[27.9,null],[28.5,null],[28.7125,null],[29.0,2.0],[29.125,null],[29.7,1.0],[30.0,5.0],[30.0708,1.0],[30.5,4.0],[30.6958,null],[31.0,2.0],[31.275,null],[31.3875,3.0],[32.3208,null],[32.5,1.0],[33.0,2.0],[33.5,null],[34.0208,null],[34.375,null],[34.6542,null],[35.0,null],[35.5,3.0],[36.75,1.0],[37.0042,1.0],[38.5,null],[39.0,3.0],[39.4,1.0],[39.6,1.0],[39.6875,null],[40.125,null],[41.5792,2.0],[42.4,null],[46.9,null],[47.1,null],[49.5,1.0],[49.5042,1.0],[50.0,null],[50.4958,null],[51.4792,1.0],[51.8625,1.0],[52.0,3.0],[52.5542,3.0],[53.1,3.0],[55.0,2.0],[55.4417,1.0],[55.9,1.0],[56.4958,5.0],[56.9292,2.0],[57.0,2.0],[57.9792,2.0],[59.4,1.0],[61.175,null],[61.3792,null],[61.9792,null],[63.3583,1.0],[65.0,2.0],[66.6,1.0],[69.3,2.0],[69.55,null],[71.0,1.0],[71.2833,1.0],[73.5,null],[75.25,1.0],[76.2917,1.0],[76.7292,3.0],[77.2875,null],[77.9583,3.0],[78.2667,2.0],[78.85,1.0],[79.2,2.0],[79.65,2.0],[80.0,2.0],[81.8583,1.0],[82.1708,1.0],[83.1583,3.0],[83.475,1.0],[86.5,3.0],[89.1042,2.0],[90.0,3.0],[91.0792,2.0],[93.5,2.0],[106.425,1.0],[108.9,1.0],[110.8833,3.0],[113.275,2.0],[120.0,4.0],[133.65,2.0],[134.5,2.0],[135.6333,2.0],[146.5208,2.0],[151.55,2.0],[153.4625,2.0],[164.8667,2.0],[211.3375,3.0],[211.5,null],[221.7792,null],[227.525,3.0],[247.5208,1.0],[262.375,2.0],[263.0,2.0],[512.3292,3.0]],"color":"rgba(0,128,0,0.7)"}],"plotOptions":{"series":{"animation":false},"line":{"animation":false},"column":{"animation":false},"bar":{"animation":false},"pie":{"animation":false},"scatter":{"animation":false,"showInLegend":true},"bubble":{"animation":false},"treemap":{"animation":false}},"yAxis":{"title":{"text":"<b>Frequency<\/b>"},"labels":{"format":"{value}"}},"xAxis":{"title":{"text":"<b>Fair Paid<\/b>"},"labels":{"format":"\u00a3{value:.1f}"},"categories":[0.0,4.0125,5.0,6.2375,6.4375,6.45,6.4958,6.75,6.8583,6.95,6.975,7.0458,7.05,7.0542,7.125,7.1417,7.225,7.2292,7.25,7.3125,7.4958,7.5208,7.55,7.6292,7.65,7.725,7.7292,7.7333,7.7375,7.7417,7.75,7.775,7.7875,7.7958,7.8,7.8292,7.8542,7.875,7.8792,7.8875,7.8958,7.925,8.0292,8.05,8.1125,8.1375,8.1583,8.3,8.3625,8.4042,8.4333,8.4583,8.5167,8.6542,8.6625,8.6833,8.7125,8.85,9.0,9.2167,9.225,9.35,9.475,9.4833,9.5,9.5875,9.825,9.8375,9.8417,9.8458,10.1708,10.4625,10.5,10.5167,11.1333,11.2417,11.5,12.0,12.275,12.2875,12.35,12.475,12.525,12.65,12.875,13.0,13.4167,13.5,13.7917,13.8583,13.8625,14.0,14.1083,14.4,14.4542,14.4583,14.5,15.0,15.0458,15.05,15.1,15.2458,15.5,15.55,15.7417,15.75,15.85,15.9,16.0,16.1,16.7,17.4,17.8,18.0,18.75,18.7875,19.2583,19.5,19.9667,20.2125,20.25,20.525,20.575,21.0,21.075,21.6792,22.025,22.3583,22.525,23.0,23.25,23.45,24.0,24.15,25.4667,25.5875,25.925,25.9292,26.0,26.25,26.2833,26.2875,26.3875,26.55,27.0,27.7208,27.75,27.9,28.5,28.7125,29.0,29.125,29.7,30.0,30.0708,30.5,30.6958,31.0,31.275,31.3875,32.3208,32.5,33.0,33.5,34.0208,34.375,34.6542,35.0,35.5,36.75,37.0042,38.5,39.0,39.4,39.6,39.6875,40.125,41.5792,42.4,46.9,47.1,49.5,49.5042,50.0,50.4958,51.4792,51.8625,52.0,52.5542,53.1,55.0,55.4417,55.9,56.4958,56.9292,57.0,57.9792,59.4,61.175,61.3792,61.9792,63.3583,65.0,66.6,69.3,69.55,71.0,71.2833,73.5,75.25,76.2917,76.7292,77.2875,77.9583,78.2667,78.85,79.2,79.65,80.0,81.8583,82.1708,83.1583,83.475,86.5,89.1042,90.0,91.0792,93.5,106.425,108.9,110.8833,113.275,120.0,133.65,134.5,135.6333,146.5208,151.55,153.4625,164.8667,211.3375,211.5,221.7792,227.525,247.5208,262.375,263.0,512.3292]},"tooltip":{"headerFormat":"<b>{series.name}<\/b><br>","pointFormat":"\u00a3{point.x:.2f}, Frequency {point.y}"},"title":{"text":"Survival by Fare Paid"},"subtitle":{"text":"(drag-select to zoom)"}};
     options = JSON.stringify(options);
 
@@ -5072,7 +5072,7 @@ options = JSON.parse(options, function(key, value) {
     return value;
 });
 
-    
+
 
     var opt = $.extend(true, {}, options);
     if (window.opts==undefined) {
@@ -5081,12 +5081,12 @@ options = JSON.parse(options, function(key, value) {
     window.opts['9f42d22d_990f_4492_b3a4_d94b68403939'] = opt;
 
     console.log('Highcharts/Highstock options accessible as opts["9f42d22d_990f_4492_b3a4_d94b68403939"]');
-    
-            
+
+
             window.chart = new Highcharts.Chart(options);
-            
+
     console.log('Highcharts/Highstock chart accessible as charts["9f42d22d_990f_4492_b3a4_d94b68403939"]');
-    
+
         });
     });
     </script>
@@ -5799,7 +5799,7 @@ UhsZviRJktro/wOn/fwXFCE7rAAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Looking at the values we find that predicting the deceased is good with 92% accuracy but predicting survivors is bad with 18% accuracy.</p>
-<p>This leads to precision (aka specificity), recall (aka sensitivity) and the f1-score. We'll use these abbreviations: 
+<p>This leads to precision (aka specificity), recall (aka sensitivity) and the f1-score. We'll use these abbreviations:
 <br/>TP = True Positive, FN = False Negative, etc.</p>
 <p><strong>Precision</strong> $= \frac{TP}{TP+FP}$</p>
 <p>Precision is the ratio of correct positive predictions over the total positive predictions. Out of all predicted survivors, what percentage actually survived? Where 1 is perfect and 0 means none were predicted.</p>
@@ -6076,14 +6076,14 @@ avg / total       0.61      0.61      0.54       223
 <div id="7a0663af_1a3a_4bd1_aebd_b81edd464c61"><div id="7a0663af_1a3a_4bd1_aebd_b81edd464c61container_chart"></div></div><script>
     // the Jupyter notebook loads jquery.min.js  and require.js and at the top of the page
     // then to make jquery available inside a require module
-    // the trick is http://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
+    // the trick is https://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
     define('jquery', [], function() {
         return jQuery;
     });
 
-    require(["jquery", "http://code.highcharts.com/stock/highstock.js", "http://d3js.org/d3.v3.min.js"], function() {
-        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "http://code.highcharts.com/stock/highcharts-more.js", "http://code.highcharts.com/modules/drilldown.js", "http://code.highcharts.com/modules/exporting.js", "http://code.highcharts.com/modules/heatmap.js", "http://code.highcharts.com/modules/treemap.js", "http://highcharts.github.io/export-csv/export-csv.js"], function() {
-            
+    require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
+        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
+
     var options = {"credits":{"enabled":false},"exporting":{"enabled":true},"chart":{"animation":false,"type":"column","zoomType":"xy","renderTo":"7a0663af_1a3a_4bd1_aebd_b81edd464c61container_chart"},"series":[{"name":"First Class","yAxis":0,"data":[["0-20",6],["20-40",64],["40-60",38],["60-80",32],["80-100",23],["100-120",11],["120-140",11],["140-160",9],["160-180",2],["180-200",0],["200-220",4],["220-240",5],["240-260",2],["260-520",9]],"color":"#434DF2"},{"name":"Second Class","yAxis":0,"data":[["0-20",104],["20-40",70],["40-60",3],["60-80",7],["80-100",0],["100-120",0],["120-140",0],["140-160",0],["160-180",0],["180-200",0],["200-220",0],["220-240",0],["240-260",0],["260-520",0]],"color":"#EC4242"},{"name":"Third Class","yAxis":0,"data":[["0-20",405],["20-40",66],["40-60",13],["60-80",7],["80-100",0],["100-120",0],["120-140",0],["140-160",0],["160-180",0],["180-200",0],["200-220",0],["220-240",0],["240-260",0],["260-520",0]],"color":"#B6B6B6"}],"plotOptions":{"series":{"animation":false},"line":{"animation":false},"column":{"animation":false,"groupPadding":0.05,"pointPadding":0,"borderWidth":1,"showInLegend":true},"bar":{"animation":false},"pie":{"animation":false},"scatter":{"animation":false},"bubble":{"animation":false},"treemap":{"animation":false}},"yAxis":{"title":{"text":"<b>Frequency<\/b>"}},"xAxis":{"title":{"text":"<b>Price Groups<\/b>"},"categories":["0-20","20-40","40-60","60-80","80-100","100-120","120-140","140-160","160-180","180-200","200-220","220-240","240-260","260-520"]},"tooltip":{"headerFormat":"<b>\u00a3{point.x}<\/b><br>","shared":"True"},"title":{"text":"Price Distribution by Ticket Class"},"subtitle":{"text":"(drag-select to zoom)"}};
     options = JSON.stringify(options);
 
@@ -6113,7 +6113,7 @@ options = JSON.parse(options, function(key, value) {
     return value;
 });
 
-    
+
 
     var opt = $.extend(true, {}, options);
     if (window.opts==undefined) {
@@ -6122,12 +6122,12 @@ options = JSON.parse(options, function(key, value) {
     window.opts['7a0663af_1a3a_4bd1_aebd_b81edd464c61'] = opt;
 
     console.log('Highcharts/Highstock options accessible as opts["7a0663af_1a3a_4bd1_aebd_b81edd464c61"]');
-    
-            
+
+
             window.chart = new Highcharts.Chart(options);
-            
+
     console.log('Highcharts/Highstock chart accessible as charts["7a0663af_1a3a_4bd1_aebd_b81edd464c61"]');
-    
+
         });
     });
     </script>
@@ -6331,14 +6331,14 @@ options = JSON.parse(options, function(key, value) {
 <div id="3dda8667_1586_43e3_a9d6_647cd1c12242"><div id="3dda8667_1586_43e3_a9d6_647cd1c12242container_chart"></div></div><script>
     // the Jupyter notebook loads jquery.min.js  and require.js and at the top of the page
     // then to make jquery available inside a require module
-    // the trick is http://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
+    // the trick is https://www.manuel-strehl.de/dev/load_jquery_before_requirejs.en.html
     define('jquery', [], function() {
         return jQuery;
     });
 
-    require(["jquery", "http://code.highcharts.com/stock/highstock.js", "http://d3js.org/d3.v3.min.js"], function() {
-        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "http://code.highcharts.com/stock/highcharts-more.js", "http://code.highcharts.com/modules/drilldown.js", "http://code.highcharts.com/modules/exporting.js", "http://code.highcharts.com/modules/heatmap.js", "http://code.highcharts.com/modules/treemap.js", "http://highcharts.github.io/export-csv/export-csv.js"], function() {
-            
+    require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
+        require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
+
     var options = {"credits":{"enabled":false},"exporting":{"enabled":true},"chart":{"animation":false,"type":"column","renderTo":"3dda8667_1586_43e3_a9d6_647cd1c12242container_chart"},"series":[{"name":"Died","yAxis":0,"data":[[["Female","First Class"],3],[["Female","Second Class"],6],[["Female","Third Class"],72],[["Male","First Class"],77],[["Male","Second Class"],91],[["Male","Third Class"],300]],"color":"black"},{"name":"Survived","yAxis":0,"data":[[["Female","First Class"],91],[["Female","Second Class"],70],[["Female","Third Class"],72],[["Male","First Class"],45],[["Male","Second Class"],17],[["Male","Third Class"],47]],"color":"green"}],"plotOptions":{"series":{"animation":false},"line":{"animation":false},"column":{"animation":false,"stacking":"percent","showInLegend":true},"bar":{"animation":false},"pie":{"animation":false},"scatter":{"animation":false},"bubble":{"animation":false},"treemap":{"animation":false}},"yAxis":{"title":{"text":"<b>Percentage<\/b>"},"labels":{"format":"{value}%"}},"xAxis":{"title":{"text":"<b>Ticket Class<\/b>"},"categories":[["Female","First Class"],["Female","Second Class"],["Female","Third Class"],["Male","First Class"],["Male","Second Class"],["Male","Third Class"]]},"tooltip":{"headerFormat":"","pointFormat":"<span style=\"color:{series.color}\">{series.name}<\/span>: <b>{point.y}<\/b> ({point.percentage:.1f}%)<br\/>","shared":"True"},"title":{"text":"Survival by Gender and Ticket Class"}};
     options = JSON.stringify(options);
 
@@ -6368,7 +6368,7 @@ options = JSON.parse(options, function(key, value) {
     return value;
 });
 
-    
+
 
     var opt = $.extend(true, {}, options);
     if (window.opts==undefined) {
@@ -6377,12 +6377,12 @@ options = JSON.parse(options, function(key, value) {
     window.opts['3dda8667_1586_43e3_a9d6_647cd1c12242'] = opt;
 
     console.log('Highcharts/Highstock options accessible as opts["3dda8667_1586_43e3_a9d6_647cd1c12242"]');
-    
-            
+
+
             window.chart = new Highcharts.Chart(options);
-            
+
     console.log('Highcharts/Highstock chart accessible as charts["3dda8667_1586_43e3_a9d6_647cd1c12242"]');
-    
+
         });
     });
     </script>
@@ -7401,8 +7401,8 @@ qoUBVJIkSZJUCwOoJEmSJKkW/x+KUmaKDGYivQAAAABJRU5ErkJggg==
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="4)-Conclusion">4) Conclusion<a class="anchor-link" href="#4)-Conclusion">¶</a></h2><p>In this notebook we explored five factors and determined which ones influenced survival aboard the Titanic as per the <a href="https://www.kaggle.com/c/titanic/download/train.csv">Kaggle training dataset</a>.</p>
 <p>To answer our question: <strong>Which factors influence survival of a passenger?</strong></p>
-<p>Gender and Ticket Class are strong influencing factors. 
-<br/>Age Groups and Embarking Ports are weak influencing factors. 
+<p>Gender and Ticket Class are strong influencing factors.
+<br/>Age Groups and Embarking Ports are weak influencing factors.
 <br/>Fare Paid is not an influencing factor.</p>
 <p>Combinations of factors that lead to >90% survival rate:</p>
 <ul>
@@ -7428,11 +7428,11 @@ qoUBVJIkSZJUCwOoJEmSJKkW/x+KUmaKDGYivQAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="References">References<a class="anchor-link" href="#References">¶</a></h2><p><a href="https://pandas.pydata.org/pandas-docs/stable/index.html">Pandas official documentation (various)</a> 2017</p>
-<p><a href="http://seaborn.pydata.org/">Seaborn official documentation (various)</a> 2017</p>
+<p><a href="https://seaborn.pydata.org/">Seaborn official documentation (various)</a> 2017</p>
 <p><a href="https://api.highcharts.com/highcharts/">Highcharts Options Reference</a> 2017</p>
 <p><a href="https://stackoverflow.com/questions">Stack Overflow Questions (various for Pandas,Seaborn)</a> 2017</p>
 <p><a href="https://stats.stackexchange.com/">Cross Validated - Stack Exchange Questions (various for Statistics)</a> 2017</p>
-<p><a href="http://groups.chass.utoronto.ca/pol242/Labs/LM-3A/LM-3A_content.htm">Univerty of Toronto - Crosstabulation with Nominal Variables</a> 2017</p>
+<p><a href="https://groups.chass.utoronto.ca/pol242/Labs/LM-3A/LM-3A_content.htm">Univerty of Toronto - Crosstabulation with Nominal Variables</a> 2017</p>
 <p><a href="https://guides.nyu.edu/quant/choose_test_1DV">NYU - Quantitative Analysis Guide: Choose Statistical Test for 1 Dependent Variable</a> 2017</p>
 <p><a href="https://stats.idre.ucla.edu/other/mult-pkg/whatstat/">UCLA - CHOOSING THE CORRECT STATISTICAL TEST IN SAS, STATA, SPSS AND R</a> 2017</p>
 </div>
@@ -7539,7 +7539,7 @@ pre code {
       <p>
         © 2012-2017 Jason Wills Chiu, license <a href=""> </a>
         unless otherwise noted.
-        Generated by <a href= "http://docs.getpelican.com/">Pelican</a>.
+        Generated by <a href= "https://docs.getpelican.com/">Pelican</a>.
       </p>
     </footer>
 -->
