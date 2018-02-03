@@ -1636,7 +1636,7 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Put us in the right folder that contains our clien_secret.json file</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Put us in the right folder that contains our client_secret.json file</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">'C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">JWC</span><span class="se">\\</span><span class="s1">Google Drive</span><span class="se">\\</span><span class="s1">Home</span><span class="se">\\</span><span class="s1">Datastuff</span><span class="se">\\</span><span class="s1">homepro</span><span class="se">\\</span><span class="s1">Fishing'</span><span class="p">)</span>
 
@@ -1655,7 +1655,7 @@ h6:hover .anchor-link {
 <span class="c1"># Open a wooksheet by name</span>
 <span class="n">sheet</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"Fishing Spots"</span><span class="p">)</span><span class="o">.</span><span class="n">worksheet_by_title</span><span class="p">(</span><span class="s1">'Journal'</span><span class="p">)</span>
 
-<span class="c1"># Get all values outputs a list of lists, easier to handle than list of dicts</span>
+<span class="c1"># Put sheet into a dataframe</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">sheet</span><span class="o">.</span><span class="n">get_as_df</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1708,10 +1708,10 @@ h6:hover .anchor-link {
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div id="aebca594-b34d-4c9b-bba5-dff2faf1c1a7"></div>
+<div id="2756ec14-3a6c-46ed-825d-94b903198deb"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#aebca594-b34d-4c9b-bba5-dff2faf1c1a7');
+var element = $('#2756ec14-3a6c-46ed-825d-94b903198deb');
 
 require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3js.org/d3.v3.min.js"], function() {
     require(["https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", "https://code.highcharts.com/stock/highcharts-more.js", "https://code.highcharts.com/modules/drilldown.js", "https://code.highcharts.com/modules/exporting.js", "https://code.highcharts.com/modules/heatmap.js", "https://code.highcharts.com/modules/treemap.js", "https://code.highcharts.com/modules/sunburst.js", "https://highcharts.github.io/export-csv/export-csv.js"], function() {
@@ -1884,7 +1884,7 @@ require(["jquery", "https://code.highcharts.com/stock/highstock.js", "https://d3
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>All data is in string form at the moment, hence the 'object' dtype in all columns.</p>
+<p>All cells are of type string, hence the 'object' dtype in all columns.</p>
 </div>
 </div>
 </div>
@@ -1931,7 +1931,8 @@ memory usage: 55.4+ KB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>My findtypes function shows similar information. Later we find out that there are rows with all empty strings hiding amongst our journal entries.</p>
+<p>My findtypes function shows the number of unique types in each column. No hidden types as we have str(ing) and 545 for each column.</p>
+<p>However we later find out that there are rows with all empty strings lurking amongst our journal entries.</p>
 </div>
 </div>
 </div>
